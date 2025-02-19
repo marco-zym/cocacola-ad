@@ -3,11 +3,8 @@
     <head>
         <title>Open a Coke, Open the World. - Coca Cola Ad</title>
         <style>
-            div {
-                display: flex;
-                align-items: center;
-            }
 
+            /*
             h1 {
                 width: 100%;
                 text-align: center;
@@ -16,10 +13,26 @@
             img {
                 border: 25%;
             }
+            */
+
+            body {
+                margin: 0; /* 移除默认的 body 边距 */
+                padding: 0;
+            }
+            .container {
+                width: 80%; /* 设置容器宽度 */
+                margin: 0 auto; /* 水平居中对齐 */
+                background-color: #f0f0f0;
+                padding: 20px;
+                text-align: center; /* 如果需要内容也居中 */
+                height: 100%;
+            }
         </style>
     </head>
     <body>
-        <h1>Open a Coke, Open the World.</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/800px-Coca-Cola_logo.svg.png">
+        <div class="container">
+            <h1>Open a Coke, Open the World.</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/800px-Coca-Cola_logo.svg.png">
+        </div>
     </body>
 </html>
