@@ -1,0 +1,25 @@
+<button id="shareBtn">分享本页</button>
+
+<script>
+const shareButton = document.getElementById('shareBtn');
+
+async function sharePage() {
+  try {
+    await navigator.share({
+      title: document.title,
+      text: '看看这个有趣的网页！',
+      url: window.location.href
+    });
+    console.log('分享成功');
+  } catch (err) {
+    console.log('分享取消', err);
+  }
+}
+
+if (navigator.share) {
+  shareButton.addEventListener('click', sharePage);
+} else {
+  shareButton.style.display = 'none'; // 隐藏不支持的按钮
+  // 或者显示传统分享按钮
+}
+</script>
